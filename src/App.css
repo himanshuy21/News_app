@@ -1,6 +1,65 @@
 .container {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* width: 100%; */
-  background-color: red;
+  width: 100%;
+}
+.centerContent {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+body {
+  background-color: black;
+}
+.header {
+  color: white;
+}
+.card {
+  background-color: black;
+  color: white;
+  width: 100%;
+}
+.card-img-top {
+  width: 200px;
+  border-radius: 12px;
+  max-height: 100px;
+  object-fit: contain;
+}
+.card-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card-title {
+  cursor: pointer;
+}
+.card-subBody {
+  margin: 12px;
+}
+.card {
+  border-bottom-color: aqua;
+  height: 25vh;
+  padding: 10px;
+}
+.card:hover {
+  color: black;
+  transition: all 0.2s ease-out;
+  box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+  /* top: -4px; */
+  border: 1px solid #cccccc;
+  background-color: white;
+}
+@media only screen and (max-width: 1000px) {
+  .centerContent {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .card {
+    height: 40vh;
+  }
+  .card-body {
+    /* flex-direction: column; */
+    height: 20vh;
+    width: 100%;
+  }
+  .card-img-top {
+    width: 100%;
+  }
 }

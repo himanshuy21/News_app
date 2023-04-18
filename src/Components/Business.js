@@ -2,14 +2,13 @@ import React, { useEffect, useState } from "react";
 import { NewsApi } from "../Api/Newsapi";
 import "../App.css";
 import { Navbar } from "./Navbar/Navbar";
-import { useLocation } from "react-router-dom";
-export const Home = () => {
-  const [value, setValue] = useState("entertainment");
+import { Link } from "react-router-dom";
+export const Business = () => {
+  const [value, setValue] = useState("Business");
   const [data, setData] = useState([]);
   useEffect(() => {
     NewsApi(value).then((res) => {
-      // console.log(res.data.articles);
-      console.log(res.data);
+      console.log(res.data.articles);
       setData(res.data.articles);
     });
   }, []);
@@ -19,7 +18,10 @@ export const Home = () => {
         <div className="card-body">
           <div className="card-subBody">
             <h5 className="card-title">{item.title}</h5>
-            {/* <p className="card-title">{item.description}</p> */}
+            {/* <p className="card-title">
+              {item.description}
+              <Link to={item.url}>ReadMore</Link>
+            </p> */}
           </div>
           {/* <a href={item.url} className="btn btn-danger">
             Read More

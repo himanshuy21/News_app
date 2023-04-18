@@ -2,14 +2,12 @@ import React, { useEffect, useState } from "react";
 import { NewsApi } from "../Api/Newsapi";
 import "../App.css";
 import { Navbar } from "./Navbar/Navbar";
-import { useLocation } from "react-router-dom";
-export const Home = () => {
-  const [value, setValue] = useState("entertainment");
+export const Technology = () => {
+  const [value, setValue] = useState("technology");
   const [data, setData] = useState([]);
   useEffect(() => {
     NewsApi(value).then((res) => {
-      // console.log(res.data.articles);
-      console.log(res.data);
+      console.log(res.data.articles);
       setData(res.data.articles);
     });
   }, []);
