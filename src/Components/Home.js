@@ -28,11 +28,7 @@ export const Home = () => {
             >
               {item.title}
             </h5>
-            {/* <p className="card-title">{item.description}</p> */}
           </div>
-          {/* <a href={item.url} className="btn btn-danger">
-            Read More
-          </a> */}
           <img
             className="card-img-top"
             src={item.urlToImage}
