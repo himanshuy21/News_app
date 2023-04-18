@@ -12,12 +12,21 @@ export const Business = () => {
       setData(res.data.articles);
     });
   }, []);
+  const openInNewTab = (url) => {
+    window.open(url, "_blank", "noreferrer");
+  };
   let listItems = data.map((item) => (
     <div className="container ">
       <div className="card ">
         <div className="card-body">
           <div className="card-subBody">
-            <h5 className="card-title">{item.title}</h5>
+            <h5
+              role="link"
+              className="card-title"
+              onClick={() => openInNewTab(item.url)}
+            >
+              {item.title}
+            </h5>
             {/* <p className="card-title">
               {item.description}
               <Link to={item.url}>ReadMore</Link>
