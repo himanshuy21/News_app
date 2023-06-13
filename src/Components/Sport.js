@@ -16,14 +16,10 @@ export const Sports = () => {
   };
   let listItems = data.map((item) => (
     <div className="container ">
-      <div className="card ">
+      <div className="card " onClick={() => openInNewTab(item.url)}>
         <div className="card-body">
           <div className="card-subBody">
-            <h5
-              className="card-title"
-              role="link"
-              onClick={() => openInNewTab(item.url)}
-            >
+            <h5 className="card-title" role="link">
               {item.title}
             </h5>
             {/* <p className="card-title">{item.description}</p> */}

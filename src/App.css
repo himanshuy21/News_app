@@ -45,6 +45,7 @@ body {
   /* top: -4px; */
   border: 1px solid #cccccc;
   background-color: white;
+  cursor: pointer;
 }
 @media only screen and (max-width: 1000px) {
   .centerContent {

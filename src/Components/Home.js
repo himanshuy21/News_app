@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { NewsApi } from "../Api/Newsapi";
 import "../App.css";
+import { Spinner } from "./Loading";
 import { Navbar } from "./Navbar/Navbar";
 import { useLocation } from "react-router-dom";
 export const Home = () => {
   const [value, setValue] = useState("entertainment");
+  const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
   useEffect(() => {
     NewsApi(value).then((res) => {
